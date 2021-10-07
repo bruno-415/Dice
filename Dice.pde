@@ -1,3 +1,5 @@
+int sumOfDots;
+
 void setup()
   {
     size(800,800);
@@ -6,10 +8,12 @@ void setup()
 void draw()
 {
     //your code here
+    sumOfDots = 0;
     background(0);
-    BigDie test = new BigDie(100,100);
-    test.roll();
-    test.show();
+    BigDie big = new BigDie(100,100);
+    big.roll();
+    big.show();
+    System.outprintln(sumOfDots);
 }
 void mousePressed()
 {
@@ -35,6 +39,7 @@ class BigDie //models one single dice cube
     {
         //your code here
         num = (int)(Math.random()*6+1);
+        sumOfDots += num;
     }
     void show()
     {
@@ -118,7 +123,8 @@ class MediumDie
   void roll()
     {
         //your code here
-        num = (int)(Math.random()*2+1);
+        num = (int)(Math.random()*6+1);
+        sumOfDots += num;
     }
   void show()
   {
@@ -191,6 +197,7 @@ class MediumDie
   {
       //your code here
       num = (int)(Math.random()*6+1);
+      sumOfDots += num;
   }
   void show()
   {
@@ -261,7 +268,8 @@ class TinyDie
   void roll()
   {
       //your code here
-      num = (int)(Math.random()*2+1);
+      num = (int)(Math.random()*6+1);
+      sumOfDots += num;
   }
   void show()
   {
