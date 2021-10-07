@@ -137,40 +137,40 @@ class MediumDie
           small = new SmallDie(myX+42, myY+42);
           small.show();
         }
-        /*else if(num == 3) { //roll a 3
-          small = new SmallDie(220,220);
+        else if(num == 3) { //roll a 3
+          small = new SmallDie(myX+22,myY+22);
           small.show();
-          small = new SmallDie(350,350);
+          small = new SmallDie(myX+32,myY+32);
           small.show();
-          small = new SmallDie(480,480);
+          small = new SmallDie(myX+42,myY+42);
           small.show();
         }
         else if(num == 4) { //roll a 4
-          for(int y = 220; y <= 480; y += 260) {
-            for (int x = 220; x <= 480; x += 260) {
+          for(int y = myY+22; y <= myY+42; y += 20) {
+            for (int x = myX+22; x <= myX+42; x += 20) {
               small = new SmallDie(x, y);
               small.show();
             }
           }
         }
         else if(num == 5) { //roll a 5
-          for(int y = 220; y <= 480; y += 260) {
-            for (int x = 220; x <= 480; x += 260) {
+          for(int y = myY+22; y <= myY+42; y += 20) {
+            for (int x = myX+22; x <= myX+42; x += 20) {
               small = new SmallDie(x, y);
               small.show();
             }
           }
-          small = new SmallDie(350,350);
+          small = new SmallDie(myX+32,myY+32);
           small.show();
         }
         else if(num == 6) { //roll a 6
-          for(int y = 220; y <= 480; y += 130) {
-            for (int x = 220; x <= 480; x += 260) {
+          for(int y = myY+22; y <= myY+42; y += 10) {
+            for (int x = myX+22; x <= myX+42; x += 20) {
               small = new SmallDie(x, y);
               small.show();
             }
           }
-        }*/
+        }
   }
 }
 
@@ -180,9 +180,81 @@ class MediumDie
   int myX;
   int myY;
   int num;
+  TinyDie tiny;
   
   SmallDie(int x, int y){
     mySize = 16;
+    myX = x;
+    myY = y;
+  }
+  void roll()
+  {
+      //your code here
+      num = (int)(Math.random()*6+1);
+  }
+  void show()
+  {
+      //your code here
+      //System.out.println(num);
+      fill(255);
+      rect(myX, myY, mySize, mySize, 10);
+      
+      if(num == 1) { //roll a 1
+          tiny = new TinyDie(myX+7, myY+7);
+          tiny.show();
+        }
+        else if(num == 2) { //roll a 2
+          tiny = new TinyDie(myX+4, myY+4);
+          tiny.show();
+          tiny = new TinyDie(myX+10, myY+10);
+          tiny.show();
+        }
+        else if(num == 3) { //roll a 3
+          tiny = new TinyDie(myX+4,myY+4);
+          tiny.show();
+          tiny = new TinyDie(myX+7,myY+7);
+          tiny.show();
+          tiny = new TinyDie(myX+10,myY+10);
+          tiny.show();
+        }
+        else if(num == 4) { //roll a 4
+          for(int y = myY+4; y <= myY+10; y += 6) {
+            for (int x = myX+4; x <= myX+10; x += 6) {
+              tiny = new TinyDie(x, y);
+              tiny.show();
+            }
+          }
+        }
+        else if(num == 5) { //roll a 5
+          for(int y = myY+4; y <= myY+10; y += 6) {
+            for (int x = myX+4; x <= myX+10; x += 6) {
+              tiny = new TinyDie(x, y);
+              tiny.show();
+            }
+          }
+          tiny = new TinyDie(myX+7,myY+7);
+          tiny.show();
+        }
+        else if(num == 6) { //roll a 6
+          for(int y = myY+4; y <= myY+10; y += 3) {
+            for (int x = myX+4; x <= myX+10; x += 6) {
+              tiny = new TinyDie(x, y);
+              tiny.show();
+            }
+          }
+        }
+  }
+}
+
+class TinyDie
+{
+  int mySize;
+  int myX;
+  int myY;
+  int num;
+  
+  TinyDie(int x, int y){
+    mySize = 2;
     myX = x;
     myY = y;
   }
@@ -195,8 +267,7 @@ class MediumDie
   {
       //your code here
       //System.out.println(num);
-      fill(255);
-      rect(myX, myY, mySize, mySize, 10);
-      System.out.println("here");
+      fill(0);
+      rect(myX, myY, mySize, mySize);
   }
 }
