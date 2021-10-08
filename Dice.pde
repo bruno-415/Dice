@@ -12,6 +12,8 @@ void draw() {
   big.roll();
   big.show();
   System.out.println(sumOfDots);
+  fill(255);
+  text(sumOfDots, 380, 750);
 }
 
 void mousePressed() {
