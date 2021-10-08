@@ -11,7 +11,6 @@ void draw() {
   BigDie big = new BigDie(100,100);
   big.roll();
   big.show();
-  System.out.println(sumOfDots);
   fill(255);
   text(sumOfDots + " dots", 370, 750);
 }
