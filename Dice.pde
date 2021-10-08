@@ -39,7 +39,6 @@ class BigDie {
   }
   void show() {
     //your code here
-    System.out.println(num);
     fill(255);
     rect(myX, myY, mySize, mySize, 60);
     fill(0);
@@ -122,7 +121,6 @@ class MediumDie
   }
   void show() {
     //your code here
-    //System.out.println(num);
     fill(0);
     rect(myX, myY, mySize, mySize, 60);
     
@@ -205,7 +203,6 @@ class MediumDie
   void show()
   {
       //your code here
-      //System.out.println(num);
       fill(255);
       rect(myX, myY, mySize, mySize, 10);
       
@@ -277,7 +274,6 @@ class TinyDie
   void show()
   {
     //your code here
-    //System.out.println(num);
     fill(0);
     rect(myX, myY, mySize, mySize);
   }
