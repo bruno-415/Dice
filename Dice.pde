@@ -7,7 +7,7 @@ void setup() {
 
 void draw() {
   sumOfDots = 0;
-  background(0);
+  background(100);
   BigDie big = new BigDie(100,100);
   big.roll();
   big.show();
