@@ -13,7 +13,7 @@ void draw() {
   big.show();
   System.out.println(sumOfDots);
   fill(255);
-  text(sumOfDots, 380, 750);
+  text(sumOfDots + " dots", 370, 750);
 }
 
 void mousePressed() {
